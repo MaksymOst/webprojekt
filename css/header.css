@@ -1,26 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
 
-svg {
-	font-family: "Silkscreen", sans-serif;
-	width: 100%; height: 100%;
-}
-svg text {
-	animation: stroke <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6</font></font>s infinite alternate;
-	stroke-width: 2;
-	stroke: #198754;
-	font-size: <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">117</font></font>px;
-}
-@keyframes stroke {
-	0%   {
-		fill: rgba(220,53,69,0); stroke: rgba(25,135,84,1);
-		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
-	}
-	70%  {fill: rgba(220,53,69,0); stroke: rgba(25,135,84,1); }
-	80%  {fill: rgba(220,53,69,0); stroke: rgba(25,135,84,1); stroke-width: 3; }
-	100% {
-		fill: rgba(220,53,69,1); stroke: rgba(25,135,84,0);
-		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
-	}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #212529;
 }
 
-.wrapper {background-color: #212529};
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px; /* Höhe des Headers anpassen */
+}
+
+svg {
+    font-family: "Silkscreen", sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+svg text {
+    animation: stroke 6s infinite alternate;
+    stroke-width: 3;
+    stroke: #198754;
+    font-size: 150px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+@keyframes stroke {
+    0%   {
+        fill: rgba(220,53,69,0); stroke: rgba(25,135,84,1);
+        stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 3;
+    }
+    70%  {fill: rgba(220,53,69,0); stroke: rgba(25,135,84,1); }
+    80%  {fill: rgba(220,53,69,0); stroke: rgba(25,135,84,1); stroke-width: 4; }
+    100% {
+        fill: rgba(220,53,69,1); stroke: rgba(25,135,84,0);
+        stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+    }
+}
