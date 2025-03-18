@@ -13,6 +13,25 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
         defer></script>
     <title>Mitarbeiter</title>
+    <style>
+        .card-img-container {
+            width: 100%;
+            height: 0;
+            padding-top: 100%; /* Bildcontainer quadratisch machen */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img-container img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 
 <body data-bs-theme="dark">
