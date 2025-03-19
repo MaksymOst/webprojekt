@@ -15,3 +15,37 @@ No media query for `xs` since this is the default in Bootstrap */
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {}
+
+
+/* CooC'S styles */
+
+/* Spielfeld-Container */
+#tic-tac-toe-board {
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Einzelne Zellen */
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2rem;
+    user-select: none;
+    border: 1px solid #ffffff50; /* leichter transparenter Rand für Dark Theme */
+}
+
+/* Farben für Spieler */
+.x {
+    color: #0d6efd; /* Bootstrap Blau */
+}
+
+.circle {
+    color: #dc3545; /* Bootstrap Rot */
+}
