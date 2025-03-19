@@ -91,3 +91,82 @@ document.addEventListener('DOMContentLoaded', () => {
     // Spiel initial starten
     startGame();
 });
+
+
+// rätsel spiel test
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Fortschritt laden (oder neuen Fortschritt anlegen)
+    let progress = JSON.parse(localStorage.getItem('progress')) || {
+        puzzle1: false,
+        puzzle2: false,
+        puzzle3: false
+    };
+
+    // Elemente holen
+    const puzzles = [
+        { id: 1, question: 'paris', feedback: 'feedback1' },
+        { id: 2, question: '8', feedback: 'feedback2' },
+        { id: 3, question: '9', feedback: 'feedback3' }
+    ];
+
+    puzzles.forEach((puzzle, index) => {
+        const puzzleDiv = document.getElementById(`puzzle${puzzle.id}`);
+        const answerInput = document.getElementById(`answer${puzzle.id}`);
+        const submitBtn = document.getElementById(`submit${puzzle.id}`);
+        const feedback = document.getElementById(puzzle.feedback);
+
+        // Wenn Fortschritt vorhanden → zeigen
+        if (progress[`puzzle${puzzle.id}`]) {
+            puzzleDiv.style.display = 'none';
+            if (index === puzzles.length - 1) {
+                showCongrats();
+            } else {
+                const nextPuzzle = document.getElementById(`puzzle${puzzle.id + 1}`);
+                nextPuzzle.style.display = 'block';
+            }
+        }
+
+        // Antwort-Überprüfung
+        submitBtn.addEventListener('click', () => {
+            const userAnswer = answerInput.value.trim().toLowerCase();
+
+            if (userAnswer === puzzle.question) {
+                feedback.textContent = '✅ Richtig!';
+                feedback.classList.add('text-success');
+
+                // Fortschritt speichern
+                progress[`puzzle${puzzle.id}`] = true;
+                localStorage.setItem('progress', JSON.stringify(progress));
+
+                // Aktuelles Rätsel ausblenden
+                puzzleDiv.style.display = 'none';
+
+                // Nächstes Rätsel anzeigen oder Glückwunsch
+                if (index < puzzles.length - 1) {
+                    const nextPuzzle = document.getElementById(`puzzle${puzzle.id + 1}`);
+                    nextPuzzle.style.display = 'block';
+                } else {
+                    showCongrats();
+                }
+
+            } else {
+                feedback.textContent = '❌ Falsch! Versuch es nochmal.';
+                feedback.classList.add('text-danger');
+            }
+        });
+    });
+
+    function showCongrats() {
+        const message = document.getElementById('congratsMessage');
+        message.style.display = 'block';
+    }
+});
+
+// Reset-Button Funktionalität
+const resetBtn = document.getElementById('resetProgress');
+
+resetBtn.addEventListener('click', () => {
+    localStorage.removeItem('progress'); // Fortschritt löschen
+    location.reload(); // Seite neu laden
+});
