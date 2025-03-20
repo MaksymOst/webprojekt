@@ -4,7 +4,7 @@
 
 <!-- Hero Banner und Contentbeschreibung -->
 
-<div class="hero-banner">
+<div class="hero-banner mt-3">
     <div class="hero-banner-overlay"></div>
     <div class="hero-banner-content text-center">
         <div class="hero-banner-logo mb-3">
