@@ -1,5 +1,5 @@
  <!-- navigation ---->
- <nav class="container navbar navbar-expand-lg navbar-light bg-light">
+ <nav class="container navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand" href="?page=index">Frontbone Interactive</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">

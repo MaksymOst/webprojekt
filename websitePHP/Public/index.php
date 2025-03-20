@@ -16,7 +16,7 @@ include "../page-elements/head.php"
 
 ?>
 
-<body data-bs-theme="../dark">
+<body data-bs-theme="dark">
 
 
  <!-- header -->
