@@ -12,6 +12,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
         defer></script>
     <title>Document</title>
+    <script src="js/modeswitch.js"></script>
 </head>
 
 <body data-bs-theme="dark">
@@ -28,42 +29,40 @@
     
 
 
-    <!-- navigation ---->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark container">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Meine Seite</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Startseite</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Über uns</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Angebote
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Angebot 1</a></li>
-                            <li><a class="dropdown-item" href="#">Angebot 2</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Alle Angebote</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Suchen">
-                    <button class="btn btn-outline-success" type="submit">Suchen</button>
-                </form>
-            </div>
+<nav class="container navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Frontbone Interactive</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">                    
+                <li class="nav-item ">
+                    <a class="nav-link active" href="fertigeprojekte.html">Unsere Projekte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="workInProgress.html">Work in progress</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="geschichte.html">Unsere Geschichte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mitarbeiter.html">Unser Team</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Minigames
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="raetsel.html">Quiz</a></li>
+                        <li><a class="dropdown-item" href="tictactoe.html">TicTacToe</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button id="switch" class="btn btn-outline-success" type="submit"><img id="modeswitch" src="img/dark_mode.png" alt=""></button>
         </div>
-    </nav>
+    </div>
+</nav>
 
  <!-- Main Content -->
 <!-- Tic Tac Toe Game -->

@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isDark) {
             buttonImage.src = "/img/dark_mode.png";  // Pfad zum Bild für den Light Mode
         } else {
-            buttonImage.src = "./img/light_mode.png";   // Pfad zum Bild für den Dark Mode
+            buttonImage.src = "/img/light_mode.png";   // Pfad zum Bild für den Dark Mode
         }
     });
 });

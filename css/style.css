@@ -38,7 +38,7 @@ No media query for `xs` since this is the default in Bootstrap */
     cursor: pointer;
     font-size: 2rem;
     user-select: none;
-    border: 1px solid #ffffff50; /* leichter transparenter Rand für Dark Theme */
+    border: 1px solid#388754; /* leichter transparenter Rand für Dark Theme */
 }
 
 /* Farben für Spieler */
