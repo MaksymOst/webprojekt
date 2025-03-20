@@ -1,5 +1,7 @@
- <!-- Main Content -->
- <div class="container">
+<!-- Main Content -->
+<div class="container">
+        <h1 class="mt-4">Unsere Geschichte</h1>
+
         <div class="container">
             <!-- First section: image on left, text on right -->
             <div class="row align-items-center my-4">
