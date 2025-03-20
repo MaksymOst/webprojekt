@@ -1,0 +1,20 @@
+.card-img-container {
+    width: 100%;
+    padding-top: 100%; /* quadratisch machen */
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.card-img-container img.rounded-circle {
+    border-radius: 50%;
+}
